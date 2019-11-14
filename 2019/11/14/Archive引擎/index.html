@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Archive引擎 | YUME</title>
+  
+  
+
+  
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name='theme-color' content='#FFFFFF'>
+  <meta name='msapplication-TileColor' content='#1BC3FB'>
+  <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml'>
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css">
+  
+  
+  <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico'>
+  <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png'>
+  <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png'>
+  <link rel='mask-icon' color='#1BC3FB' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg'>
+  <link rel='manifest' href='https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest'>
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  
+
+  
+    <link rel="stylesheet" href="/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover post half'>
+      
+        
+  <h1 class='title'>YumeSawa</h1>
+
+
+  <div class="m_search">
+    <form name="searchform" class="form u-search-form">
+      <input type="text" class="input u-search-input" placeholder="搜索" />
+      <i class="icon fas fa-search fa-fw"></i>
+    </form>
+  </div>
+
+<div class='menu navgation'>
+  <ul class='h-list'>
+    
+      
+        <li>
+          <a class="nav home" href="/"
+            
+            
+            id="home">
+            <i class='fas fa-rss fa-fw'></i>&nbsp;博客
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/projects/"
+            
+            
+            id="projects">
+            <i class='fas fa-code-branch fa-fw'></i>&nbsp;项目
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/friends/"
+            
+              rel="nofollow"
+            
+            
+            id="friends">
+            <i class='fas fa-link fa-fw'></i>&nbsp;友链
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/about/"
+            
+              rel="nofollow"
+            
+            
+            id="about">
+            <i class='fas fa-info-circle fa-fw'></i>&nbsp;关于
+          </a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+    </cover>
+    <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='/' >
+        
+          YUME
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/"
+                  
+                  
+                  id="home">
+									<i class='fas fa-grin fa-fw'></i>&nbsp;博客
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/categories/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogcategories">
+									<i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/tags/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogtags">
+									<i class='fas fa-hashtag fa-fw'></i>&nbsp;标签
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/archives/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogarchives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-clock fa-fw'></i>&nbsp;近期文章
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blog/archives/"
+                
+                  rel="nofollow"
+                
+                
+                id="blogarchives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;文章归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/projects/"
+                
+                
+                id="projects">
+								<i class='fas fa-code-branch fa-fw'></i>&nbsp;开源项目
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/friends/"
+                
+                  rel="nofollow"
+                
+                
+                id="friends">
+								<i class='fas fa-link fa-fw'></i>&nbsp;我的友链
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://xaoxuu.com/wiki/material-x/"
+                
+                  rel="nofollow"
+                
+                
+                id="https:xaoxuu.comwikimaterial-x">
+								<i class='fas fa-book fa-fw'></i>&nbsp;主题文档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/about/"
+                
+                  rel="nofollow"
+                
+                
+                id="about">
+								<i class='fas fa-info-circle fa-fw'></i>&nbsp;关于小站
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+  </div>
+
+
+  <div class="l_body">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+    
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/2019/11/14/Archive%E5%BC%95%E6%93%8E/">
+        Archive引擎
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    
+      <a href="http://yoursite.com" rel="nofollow">
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png">
+        
+        <p>梦沢</p>
+      </a>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-11-14</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <h2 id="1-Archive引擎"><a href="#1-Archive引擎" class="headerlink" title="1 Archive引擎"></a>1 Archive引擎</h2><p>Archive存储引擎只支持Insert和Select操作，在MySQL5.1之前也不支持索引。Archive引擎会缓存所有的写操作并利用zlib对插入的行进行压缩，所以比MyISAM表的磁盘I/O少。但是每次select查询都需要执行全表扫描。所以Archive表适合日志和数据采集类应用，这类应用做数据分析时往往需要权标骚婊。或者在一些需要更快速的insert操作的场合下也可以使用。</p>
+<p>Archive引擎支持行级锁和专用的缓冲区，所以可以实现高并发的插入。在一个查询开始直到返回表中存在的所有行数之前，Archive引擎会组织其他的select执行，以实现一致性读。另外，也实现了批量插入在完成之前对读操作是不可见的。这种机制模仿了事物和MVCC的一些特性，但Archive引擎不是一个事物型的引擎，而是一个针对高速插入和压缩做了优化的简单引擎。</p>
+<h2 id="2-Blackhole引擎"><a href="#2-Blackhole引擎" class="headerlink" title="2 Blackhole引擎"></a>2 Blackhole引擎</h2><p>Blackhole引擎没有实现任何的存储机制，它会丢弃所有插入的数据，不做任何保存。但是服务器会记录Blackhole表的日志，所以可以用于赋值数据库到备库，或者只是简单的记录到日志。这种特殊的存储引擎可以在一些特殊的复制架构和日志审核时发挥作用。但这种应用方式会产生很多问题，因此不推荐。</p>
+<h2 id="3-CSV引擎"><a href="#3-CSV引擎" class="headerlink" title="3 CSV引擎"></a>3 CSV引擎</h2><p>CSV引擎可以将普通的CSV文件（逗号分割值的文件）作为MySQL的表来处理，但这种表不支持索引。CSV引擎可以在数据库运行时拷入或拷出文件。可以将Excel等调子表格软件中的数据存储为CSV文件，然后复制到MySQL数据目录下，就能在MySQL中打开使用。同样，如果将数据写入到一个CSV引擎表，其他的外部程序也能立即从表的数据文件中读取CSV格式的数据。因此CSV引擎可以作为一种数据交换的机制，非常有用。</p>
+<h2 id="4-Federated引擎"><a href="#4-Federated引擎" class="headerlink" title="4 Federated引擎"></a>4 Federated引擎</h2><p>Federated引擎是访问其他MySQL服务器的一个代理，它会创建一个到远程MySQL服务器的客户端连接，并将查询传输到远程服务器执行，然后提取或者发送需要的数据。最初设计该存储引擎是为了和企业级数据库如Microsoft SQL Server和Oracle的类似特性竞争的，可以说更多的是一种市场行为。尽管该引擎看起来提供了一种很好的跨服务器的灵活性，但也经常带来问题，因此默认是禁用的。MariaDB使用了它的一个后续改进版本，叫做FederatedX。</p>
+<h2 id="5-Memory引擎"><a href="#5-Memory引擎" class="headerlink" title="5 Memory引擎"></a>5 Memory引擎</h2><p>如果需要快速的访问数据，并且这些数据不会被修改，重启以后丢失也没有关系，那么使用Memory表（以前也叫HEAP表）是非常有用的。Memory表至少比MyISAM表要快一个数量级，因此所有的数据都保存在内存中，不需要进行磁盘I/O。Memory表的结构在重启以后还会保留，但数据会丢失。</p>
+<p>Memroy的应用场景：</p>
+<pre><code>① 用于查找（lookup）或者映射表，例如将邮编和城市名映射的表
+
+② 用于缓存周期性聚合数据（periodically aggregated data）的结果。
+
+③ 用于保存数据分析中产生的中间数据</code></pre><p>Memory表支持Hash索引，因此查找操作非常快。虽然Memory表的速度非常快，但还是无法取代传统的基于磁盘的表。Memroy表时表级锁，因此并发写入的性能较低。它不支持BLOB或TEXT类型的列，并且每行的长度是固定的所以即使制定了VARCHAR列，实际存储时也会转换成CHAR，这可能导致部分内存的浪费（其中一些限制在Percona版本中已解决）。</p>
+<p>如果MySQL在执行查询的过程中需要使用临时表来保存中间结果，内部使用的临时表就是Memory表。如果中间结果太大超出了Memory表的限制，或者含有BLOB或TEXT字段 ，则临时表会转换成MyISAM表。</p>
+<p>注：</p>
+<p>人们经常混淆Memory表和临时表。临时表是指使用create temporary table 语句创建的表，它可以使用任何存储引擎，因此和Memory表不是一回事。临时表只在单个连接中可见，当连接断开时，临时表将删除。</p>
+<h2 id="6-Merge引擎"><a href="#6-Merge引擎" class="headerlink" title="6 Merge引擎"></a>6 Merge引擎</h2><p>Merge引擎是MyISAM引擎的一个变种。Merge表时由多个MyISAM表合并而来的虚拟表。如果将MySQL用于日志或者数据仓库类应用，该引擎可以发挥作用。但是引入分区功能后，该引擎已经被放弃。</p>
+<h2 id="7-NDB集群引擎"><a href="#7-NDB集群引擎" class="headerlink" title="7 NDB集群引擎"></a>7 NDB集群引擎</h2><p>2003年时MySQL AB公司从索尼爱立信公司收购了NDB数据库，然后开发了NDB集群存储引擎，作为SQL和NDB原生协议之间的接口。MySQL服务器、NDB集群存储引擎，以及分布式的、share-nothing的容灾的、高可用的NDB数据库的组合，被从未MySQL集群（MySQL Cluster）。后面应该会单独写一篇文章来详细讲解MySQL集群</p>
+<h2 id="1-OLTP类引擎"><a href="#1-OLTP类引擎" class="headerlink" title="1 OLTP类引擎"></a>1 OLTP类引擎</h2><p>Percona的XtraDB存储引擎是基于InnoDB引擎的一个改进版本，已经包含在Percona Server和MariaDB中，它的改进点主要集中在性能、可测量性和操作灵活性方面。XtraDB可以作为InnoDB的一个完全的替代产品，甚至可以兼容的读写InnoDB的数据文件，并支持InnoDB的所有查询。</p>
+<p>另外还有一些和InnoDB非常类似的OLTP类存储引擎，比如都支持ACID事物和MVCC。其中一个就是PBXT，由PaulMcCullagh和Primebase GMBH开发。它支持引擎级别的赋值、外键约束，并且一一种比较复杂的架构对固态存储（SSD）提供了适当的支持，还对较大的值类型如BLOB也做了优化。PBXT是一款社区支持的存储引擎，MariaDB包含了该引擎。</p>
+<p>TokuDB引擎使用了一种新的叫做分型树（Fractal Trees）的索引数据结构。该结构是缓存无关的，因此即使其大小超过内存，性能也不会下降，也就没有内存生命周期和碎片的问题。TokuDB是一种大数据（Big Data）存储引擎，因为其拥有很高的压缩比，可以在很大的数据量上创建大量索引。</p>
+<p>RethinkDB最初是为固态存储（SSD）而设计的，然而随着时间的推移，目前看起来和最初的目标有一定的差距。该引擎比较特别的地方在于采用了一种智能追加的写时复制B树（append-only copyon-write B-Tree）作为索引的数据结构。</p>
+<p>在Sun收购了MySQL AB以后，Falcon存储引擎曾经作为下一代存储引擎被寄予期望，但现在该项目已经在很久以前就被取消了。</p>
+<h3 id="2-面向列的存储引擎"><a href="#2-面向列的存储引擎" class="headerlink" title="2 面向列的存储引擎"></a>2 面向列的存储引擎</h3><p>MySQL默认是面向行的，每一行的数据时一起存储的，服务器的传也是以行为单位处理的。而在大数据量处理时，可能面向列的方式效率更高。如果不需要整行的数据，面向列的方式可以传输更少的数据。如果每一列都单独村吃醋，那么压缩的效率也会更高。I</p>
+<p>Infobright是最有名的面向列的存储引擎。在非常大的数据量时（数十TB），该引擎工作良好。Infobright是为数据分析和数据仓库应用设计的。数据高度压缩，按照块进行排序，每个块都对应有一组员数据。在处理查询时，访问元数据可以决定跳过该块进行排序，每个块都对应有一组元数据。在处理查询时，访问元数据可决定跳过该块，甚至可能只需要元数据就可以满足查询的需求。但该引擎不支持索引，不过在这么大的数据量级，即使有索引页很难发挥作用，而且块结构也会一种准索引（quasi-index）。Infobright需要对MySQL服务器做定制，因为一些地方需要修改以适应面向列的存储需要。如果查询无法在存储层使用面向列的模式执行，则需要在服务器层转换成按行处理，这个过程会很慢。Infobright有社区版和商业版两种。</p>
+<p>另外一个面向列的存储引擎是Calpont公司的InfiniDB，也有社区版和商业版。InfiniDB可以在一组机器集群间做分布式查询，但目前还没有哦生产环境的应用案例。</p>
+<h4 id="3-社区存储引擎"><a href="#3-社区存储引擎" class="headerlink" title="3 社区存储引擎"></a>3 社区存储引擎</h4><p>如果要列举所有社区提供的引擎可能会有三位数。但是很大部分影响力有限，只有极少数人在使用。在这里举例一些，但都没有在生产环境中应用过，慎用。</p>
+<p>① Aria：之前的名字是Maria，是MySQL创建者计划用来替代MyISAM的一款引擎。MariaDB包含了该引擎，之前计划开发的很多特性因为在MariaDB服务层实现，所以引擎层就取消了。在2013~2014年Aria就是解决了MyISAM的崩溃安全回复问题，当然还有一些特性是MyISAM不具备的，例如 数据的缓存（MyISAM只能缓存索引）。</p>
+<p>② Groonga：这是一款全文索引引擎，号称可以提供准确而高效的全文索引。</p>
+<p>③ OQGraph：该引擎由uOpen Query研发，支持图操作（例如查找两点之间最短的路径），用SQL很难实现该类操作。</p>
+<p>④ Q4M：该引擎在MySQL内部实现了队列操作，这也是SQL很难实现的操作。</p>
+<p>⑤ SphinxSE：该引擎为Sphinx全文索引搜索服务提供了SQL接口。</p>
+<p>⑥ Spider：该引擎可以将数据切分成不同的分区，比较高效透明的实现了分片（shard），并且可以针对分片执行并行查询（可以是分布式的分片）。</p>
+<p>⑦ VPForMySQL：改引擎支持垂直分区，通过一系列的代理存储引擎是新。垂直分区指的是可以将表分成不同列的这，并且单独存储。但对于查询来说，看到的还是一张表。改引擎和Spider的作者是同一人。</p>
+<h3 id="转换表的引擎"><a href="#转换表的引擎" class="headerlink" title="转换表的引擎"></a>转换表的引擎</h3><p>下面接受三种Mysql 数据库将表的存储引擎转换成另外一种引擎。每种方法都有优缺点。</p>
+<p>ALTER TABLE<br>将表的一个引擎修改为另个引擎最简单的办法就是是用alter table 语句，下面是修改user 表的储存引擎；</p>
+<p>mysql&gt; alter table user engine=InnoDB;<br>Query OK, 0 rows affected (0.07 sec)<br>Records: 0  Duplicates: 0  Warnings: 0<br>mysql&gt; show table status like ‘user’ \G;<br>1<br>2<br>3<br>4<br>上述语法可以适合任何储存引擎。但是有一个问题：需要执行很长时间。Mysql会按行讲源数据复制到另一新表当中，在复制期间可能会消耗系统所有的I/O能力，同时原表会加上锁。所以在繁忙的表上执行此操作要下心。<br>如果转换表的存储引擎将会丢失和原引擎相关的所有特性。如，将一张InnoDB表转换为MyISAM，然后转换InnoDB，原InnoDB上的所有外键将会丢失。</p>
+<p>导入和导出<br>为了更好的控制转换过程，可是使用mysqldump 工具将数据导入文件中，然后修改文件中的create table 语句中的存储引擎选项，mysqldump 工具默认会在create table 中加上drop 语句。</p>
+<p>创建和查询<br>第三种装换技术综合了第一种的高效和第二种方法的中的安全，不需要导出真个表的数据。而是先创建一个新的存储引擎的表。然后利用 Insert 。。。。select 语句来导出，</p>
+<p>mysql&gt; create table myInnoDB like user;<br>Query OK, 0 rows affected (0.04 sec)</p>
+<p>mysql&gt; alter table myInnoDB engine=innodb;<br>Query OK, 0 rows affected (0.08 sec)<br>Records: 0  Duplicates: 0  Warnings: 0</p>
+<p>mysql&gt; insert into myInnoDB select * from user;</p>
+
+      </div>
+      
+        <br>
+        
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-10-31T08:19:39+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>更新于 2019年10月31日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/11/14/Archive%E5%BC%95%E6%93%8E/&title=Archive引擎 | YUME&pics=https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2019/11/14/Archive%E5%BC%95%E6%93%8E/&title=Archive引擎 | YUME&pics=https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/11/14/Archive%E5%BC%95%E6%93%8E/&title=Archive引擎 | YUME&pics=https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+      
+      
+          <div class="prev-next">
+              
+                  <section class="prev">
+                      <span class="art-item-left">
+                          <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                          <h4>
+                              <a href="/2019/11/14/day01/" rel="prev" title="day01">
+                                
+                                    day01
+                                
+                              </a>
+                          </h4>
+                          
+                      </span>
+                  </section>
+              
+              
+                  <section class="next">
+                      <span class="art-item-right" aria-hidden="true">
+                          <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                          <h4>
+                              <a href="/2019/11/14/Python/" rel="prev" title="Python">
+                                  
+                                      Python
+                                  
+                              </a>
+                          </h4>
+                          
+                      </span>
+                  </section>
+              
+          </div>
+      
+    </section>
+  </article>
+
+
+
+  <!-- 显示推荐文章和评论 -->
+
+
+
+  
+
+
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'Archive引擎',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+      
+        
+          
+          
+            
+              <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='https://pic.qqtn.com/up/2019-10/2019101709285528923.jpg'/>
+      </div>
+    
+    
+      <div class='text'>
+        
+          <h2>梦沢</h2>
+        
+        
+          <p>这是内容</p>
+
+        
+        
+          <p><span id="jinrishici-sentence">柳暗花明又一村</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:me@xaoxuu.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/xaoxuu"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=63035382"
+              class="social fas fa-headphones-alt flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <!-- <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div> -->
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Archive引擎"><span class="toc-text">1 Archive引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Blackhole引擎"><span class="toc-text">2 Blackhole引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-CSV引擎"><span class="toc-text">3 CSV引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Federated引擎"><span class="toc-text">4 Federated引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Memory引擎"><span class="toc-text">5 Memory引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Merge引擎"><span class="toc-text">6 Merge引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-NDB集群引擎"><span class="toc-text">7 NDB集群引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-OLTP类引擎"><span class="toc-text">1 OLTP类引擎</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-面向列的存储引擎"><span class="toc-text">2 面向列的存储引擎</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-社区存储引擎"><span class="toc-text">3 社区存储引擎</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#转换表的引擎"><span class="toc-text">转换表的引擎</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="/atom.xml"
+            class="social fas fa-rss flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="mailto:me@xaoxuu.com"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/xaoxuu"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=63035382"
+            class="social fas fa-headphones-alt flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>
+    本站使用
+    <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a>
+    作为主题
+    
+      ，
+      总访问量为
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      次
+    
+    。
+  </div>
+</footer>
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('') {
+          $('').backstretch(
+          ["http://pic1.win4000.com/wallpaper/e/593baa1044541.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        } else {
+          $.backstretch(
+          ["http://pic1.win4000.com/wallpaper/e/593baa1044541.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.9/js/app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.9/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
